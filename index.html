@@ -11,15 +11,15 @@
     --red:#8e1e22;        /* brand dark red */
     --red-hi:#c0282e;     /* brighter red for glow/highlights */
     --black:#0a0506;
-    --card-w:436px;       /* overall width — change to resize */
-    --radius:28px;
+    --card-w:973px;       /* 1080px total width incl. body padding */
+    --radius:62.5px;
   }
 
   html,body{margin:0;padding:0;background:transparent;overflow:hidden}
   body{
     font-family:"Barlow Semi Condensed","Segoe UI",Arial,sans-serif;
     color:#f3eaea;
-    padding:24px; /* room for the glow so it isn't clipped */
+    padding:53.5px; /* room for the glow so it isn't clipped */
   }
 
   .card{
@@ -27,19 +27,19 @@
     position:relative;
     width:var(--card-w);
     border-radius:var(--radius);
-    padding:14px 16px 16px;
+    padding:31.2px 35.7px 35.7px;
     background:
       radial-gradient(120% 90% at 0% 0%, rgba(142,30,34,.55) 0%, rgba(60,14,16,.35) 45%, transparent 75%),
       linear-gradient(160deg,#1a0a0b 0%, var(--black) 70%);
-    box-shadow:0 8px 20px -4px rgba(0,0,0,.55), 0 0 0 1px rgba(192,40,46,.22) inset;
+    box-shadow:0 17.9px 44.6px -8.9px rgba(0,0,0,.55), 0 0 0 2.2px rgba(192,40,46,.22) inset;
     overflow:hidden;isolation:isolate;
     opacity:0;
-    transform:translateY(14px) scale(.97);
+    transform:translateY(31.2px) scale(.97);
     animation:enter .7s cubic-bezier(.2,.8,.2,1) .1s forwards;
   }
   /* animated border shine */
   .card::before{
-    content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+    content:"";position:absolute;inset:0;border-radius:inherit;padding:3.3px;
     background:conic-gradient(from var(--ang,0deg), transparent 0 70%, rgba(255,255,255,.55) 80%, var(--red-hi) 86%, transparent 95%);
     -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
     -webkit-mask-composite:xor;mask-composite:exclude;
@@ -61,30 +61,30 @@
   @keyframes enter{to{opacity:1;transform:none}}
 
   /* ===== Header ===== */
-  .head{display:flex;align-items:center;gap:12px}
+  .head{display:flex;align-items:center;gap:26.8px}
   .logo{
-    flex:0 0 auto;width:52px;height:52px;border-radius:17px;overflow:hidden;
+    flex:0 0 auto;width:116px;height:116px;border-radius:37.9px;overflow:hidden;
     background:linear-gradient(165deg,#8a2226 0%,#3a0f11 45%,#000 85%);
-    box-shadow:0 0 0 1px rgba(255,255,255,.08), 0 4px 14px rgba(0,0,0,.6);
+    box-shadow:0 0 0 2.2px rgba(255,255,255,.08), 0 8.9px 31.2px rgba(0,0,0,.6);
     animation:breathe 3.2s ease-in-out infinite;
   }
   .logo img{width:100%;height:100%;display:block;object-fit:cover}
   @keyframes breathe{
-    0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.08),0 4px 14px rgba(0,0,0,.6),0 0 0 rgba(192,40,46,0)}
-    50%    {box-shadow:0 0 0 1px rgba(255,255,255,.12),0 4px 14px rgba(0,0,0,.6),0 0 14px rgba(192,40,46,.5)}
+    0%,100%{box-shadow:0 0 0 2.2px rgba(255,255,255,.08),0 8.9px 31.2px rgba(0,0,0,.6),0 0 0 rgba(192,40,46,0)}
+    50%    {box-shadow:0 0 0 2.2px rgba(255,255,255,.12),0 8.9px 31.2px rgba(0,0,0,.6),0 0 31.2px rgba(192,40,46,.5)}
   }
 
   .title{line-height:1.05;min-width:0}
-  .eyebrow{margin-top:3px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d98a8d}
-  .name{font-size:19px;white-space:nowrap;font-weight:800;font-style:italic;letter-spacing:.02em;text-transform:uppercase}
+  .eyebrow{margin-top:6.7px;font-size:26.8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d98a8d}
+  .name{font-size:42.4px;white-space:nowrap;font-weight:800;font-style:italic;letter-spacing:.02em;text-transform:uppercase}
 
   /* ===== Discord pill ===== */
   .discord{
-    margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px;
-    padding:7px 12px;border-radius:999px;
+    margin-top:26.8px;display:flex;align-items:center;justify-content:center;gap:17.9px;
+    padding:15.6px 26.8px;border-radius:999px;
     background:linear-gradient(90deg,rgba(142,30,34,.9),rgba(90,18,22,.9));
-    box-shadow:0 0 0 1px rgba(255,255,255,.08) inset;
-    font-weight:700;font-size:18px;letter-spacing:.02em;
+    box-shadow:0 0 0 2.2px rgba(255,255,255,.08) inset;
+    font-weight:700;font-size:40.2px;letter-spacing:.02em;
     position:relative;overflow:hidden;
     opacity:0;animation:fadeUp .5s ease .55s forwards;
   }
@@ -95,63 +95,63 @@
   }
   @keyframes sweep{0%{left:-50%}35%,100%{left:120%}}
   .discord .book{
-    margin-left:6px;white-space:nowrap;
-    font-size:15px;font-weight:700;letter-spacing:.01em;
-    padding:5px 10px;border-radius:999px;
+    margin-left:13.4px;white-space:nowrap;
+    font-size:33.5px;font-weight:700;letter-spacing:.01em;
+    padding:11.2px 22.3px;border-radius:999px;
     background:rgba(0,0,0,.28);
-    box-shadow:0 0 0 1px rgba(255,255,255,.18) inset;
+    box-shadow:0 0 0 2.2px rgba(255,255,255,.18) inset;
   }
-  .discord .dc-icon{height:16px;width:auto;flex:0 0 auto;display:block}
+  .discord .dc-icon{height:35.7px;width:auto;flex:0 0 auto;display:block}
 
   /* ===== Services ===== */
-  .label{margin:14px 0 8px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#a99;
-    display:flex;align-items:center;gap:8px;opacity:0;animation:fadeUp .5s ease .7s forwards}
-  .label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(192,40,46,.6),transparent)}
+  .label{margin:31.2px 0 17.9px;font-size:26.8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#a99;
+    display:flex;align-items:center;gap:17.9px;opacity:0;animation:fadeUp .5s ease .7s forwards}
+  .label::after{content:"";flex:1;height:2.2px;background:linear-gradient(90deg,rgba(192,40,46,.6),transparent)}
 
-  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:13.4px}
   .chip{
     flex:1 1 auto;text-align:center;
-    padding:5px 11px;border-radius:999px;font-size:14px;font-weight:700;
+    padding:11.2px 24.5px;border-radius:999px;font-size:31.2px;font-weight:700;
     background:rgba(255,255,255,.04);
-    box-shadow:0 0 0 1px rgba(192,40,46,.35) inset;
+    box-shadow:0 0 0 2.2px rgba(192,40,46,.35) inset;
     color:#eadede;
-    opacity:0;transform:translateY(6px);
+    opacity:0;transform:translateY(13.4px);
     animation:fadeUp .45s ease forwards;
     transition:background .5s ease, box-shadow .5s ease, color .5s ease;
   }
   .chip.active{
     background:linear-gradient(90deg,var(--red),#5a1216);
-    box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 0 12px rgba(192,40,46,.45);
+    box-shadow:0 0 0 2.2px rgba(255,255,255,.15) inset,0 0 26.8px rgba(192,40,46,.45);
     color:#fff;
   }
   /* ===== Panel slider (swipes to the right) ===== */
-  .stage{position:relative;margin:0 -16px;padding:0 16px;overflow-x:clip;overflow-y:visible}
-  .panel{position:absolute;top:0;left:16px;right:16px;
+  .stage{position:relative;margin:0 -35.7px;padding:0 35.7px;overflow-x:clip;overflow-y:visible}
+  .panel{position:absolute;top:0;left:35.7px;right:35.7px;
     transition:transform .8s cubic-bezier(.65,0,.35,1), opacity .8s ease;will-change:transform}
-  #p2 .label{margin:13px 0 9px}
+  #p2 .label{margin:29px 0 20.1px}
   .panel.is-in{transform:translateX(0);opacity:1}
   .panel.out{transform:translateX(115%);opacity:0}           /* leaves to the right */
   .panel.pre{transform:translateX(-115%);opacity:0;transition:none} /* waits on the left */
 
   /* ===== Panel 2: vouches + socials ===== */
-  .vouch{opacity:1;animation:none;font-size:18px;white-space:nowrap;box-sizing:border-box;min-height:43px;padding-top:6px;padding-bottom:6px}
-  .vouch .book{font-size:14.5px;line-height:1.08;letter-spacing:.04em;text-align:center;padding:5px 13px;border-radius:16px}
-  .vouch .star{width:18px;height:18px;flex:0 0 auto;filter:drop-shadow(0 0 6px rgba(255,120,120,.6))}
+  .vouch{opacity:1;animation:none;font-size:40.2px;white-space:nowrap;box-sizing:border-box;min-height:96px;padding-top:13.4px;padding-bottom:13.4px}
+  .vouch .book{font-size:32.4px;line-height:1.08;letter-spacing:.04em;text-align:center;padding:11.2px 29px;border-radius:35.7px}
+  .vouch .star{width:40.2px;height:40.2px;flex:0 0 auto;filter:drop-shadow(0 0 13.4px rgba(255,120,120,.6))}
   .p2-in .label{opacity:1;animation:none}
-  .socials{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-  .social{display:flex;align-items:center;gap:9px;padding:12px 11px;border-radius:19px;
-    background:rgba(255,255,255,.04);box-shadow:0 0 0 1px rgba(192,40,46,.35) inset}
-  .s-icon{width:22px;height:22px;object-fit:contain;flex:0 0 auto;display:block}
-  .s-plat{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d98a8d;line-height:1.1}
-  .s-handle{font-size:15px;font-weight:700;color:#fff;line-height:1.2}
+  .socials{display:grid;grid-template-columns:repeat(3,1fr);gap:13.4px}
+  .social{display:flex;align-items:center;gap:20.1px;padding:26.8px 24.5px;border-radius:42.4px;
+    background:rgba(255,255,255,.04);box-shadow:0 0 0 2.2px rgba(192,40,46,.35) inset}
+  .s-icon{width:49.1px;height:49.1px;object-fit:contain;flex:0 0 auto;display:block}
+  .s-plat{font-size:22.3px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d98a8d;line-height:1.1}
+  .s-handle{font-size:33.5px;font-weight:700;color:#fff;line-height:1.2}
   #p2 .label{opacity:1;animation:none}
-  #p2 .social{opacity:0;transform:translateY(6px)}
+  #p2 .social{opacity:0;transform:translateY(13.4px)}
   #p2.is-in .social{animation:fadeUp .45s ease forwards}
   #p2.is-in .social:nth-child(1){animation-delay:.45s}
   #p2.is-in .social:nth-child(2){animation-delay:.55s}
   #p2.is-in .social:nth-child(3){animation-delay:.65s}
 
-  @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(13.4px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -218,8 +218,8 @@
   // Safety: shrink the title if it ever doesn't fit (e.g. fallback font offline)
   const fitTitle = () => {
     const n = document.querySelector('.name'), box = n.parentElement;
-    let s = 19; n.style.fontSize = s + 'px';
-    while (n.scrollWidth > box.clientWidth && s > 13) { s -= 0.5; n.style.fontSize = s + 'px'; }
+    let s = 42.4; n.style.fontSize = s + 'px';
+    while (n.scrollWidth > box.clientWidth && s > 29) { s -= 1; n.style.fontSize = s + 'px'; }
   };
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(fitTitle);
 
